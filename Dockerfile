@@ -1,9 +1,3 @@
-version: '2'
-
-services:
-  pishrink:
-    build: .
-    volumes:
-      - .:/pishrink
-      - /dev:/dev
-    privileged: true
+FROM ubuntu:latest
+RUN apt-get update
+RUN apt-get install parted udev -y
